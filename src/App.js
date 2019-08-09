@@ -1,14 +1,22 @@
 import React, { Component } from 'react';
-import Counter from "./Counter";
+import { Button } from "semantic-ui-react";
+import {connect} from "react-redux";
 
 class App extends Component{
   render(){
     return (
-      <div className="App">
-        <Counter count="0"/>
+      <div>
+        <Button primary>{this.props.tes}</Button>
       </div>
     );
-  };
+  }
 };
 
-export default App;
+const stateApp = (state) =>{
+  return{
+    tes:state.tes
+  }
+}
+
+
+export default connect(stateApp) (App);
