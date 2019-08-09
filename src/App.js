@@ -1,14 +1,14 @@
-import React from 'react';
-import { Button } from "semantic-ui-react";
+import React, { Component } from 'react';
+import Counter from "./Counter";
 
-function App() {
-  return (
-    <div>
-      {""}
-      <Button primary>Tes Semantic Ui </Button>
-      {""}
-    </div>
-  );
-}
+class App extends Component{
+  render(){
+    return (
+      <div className="App">
+        <Counter count="0"/>
+      </div>
+    );
+  };
+};
 
 export default App;
